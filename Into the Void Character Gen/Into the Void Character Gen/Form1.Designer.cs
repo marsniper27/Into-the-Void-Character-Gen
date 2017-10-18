@@ -1,0 +1,187 @@
+﻿namespace Into_The_Void_Character_Gen
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.construct = new System.Windows.Forms.Button();
+            this.human = new System.Windows.Forms.Button();
+            this.Continue = new System.Windows.Forms.Button();
+            this.HumanPanel = new System.Windows.Forms.Panel();
+            this.ConstructPanel = new System.Windows.Forms.Panel();
+            this.CharacterPanel = new System.Windows.Forms.Panel();
+            this.AttributePanel = new System.Windows.Forms.Panel();
+            this.name = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.CharacterPanel.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.construct);
+            this.panel1.Controls.Add(this.human);
+            this.panel1.Location = new System.Drawing.Point(13, 13);
+            this.panel1.MinimumSize = new System.Drawing.Size(330, 318);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(330, 318);
+            this.panel1.TabIndex = 0;
+            // 
+            // construct
+            // 
+            this.construct.Location = new System.Drawing.Point(186, 126);
+            this.construct.Name = "construct";
+            this.construct.Size = new System.Drawing.Size(75, 23);
+            this.construct.TabIndex = 1;
+            this.construct.Text = "Construct";
+            this.construct.UseVisualStyleBackColor = true;
+            this.construct.Click += new System.EventHandler(this.construct_Click);
+            // 
+            // human
+            // 
+            this.human.Location = new System.Drawing.Point(77, 126);
+            this.human.Name = "human";
+            this.human.Size = new System.Drawing.Size(75, 23);
+            this.human.TabIndex = 0;
+            this.human.Text = "Human";
+            this.human.UseVisualStyleBackColor = true;
+            this.human.Click += new System.EventHandler(this.human_Click);
+            // 
+            // Continue
+            // 
+            this.Continue.Location = new System.Drawing.Point(0, 0);
+            this.Continue.Name = "Continue";
+            this.Continue.Size = new System.Drawing.Size(75, 23);
+            this.Continue.TabIndex = 5;
+            this.Continue.Text = "Continue";
+            this.Continue.UseVisualStyleBackColor = true;
+            this.Continue.Click += new System.EventHandler(this.Continue_Click);
+            this.Continue.Visible = false;
+            // 
+            // Human Panel
+            // 
+            this.HumanPanel.AutoSize = true;
+            this.HumanPanel.Location = new System.Drawing.Point(13, 13);
+            this.HumanPanel.Name = "Human";
+            this.HumanPanel.Size = new System.Drawing.Size(330, 318);
+            this.HumanPanel.TabIndex = 0;
+            this.HumanPanel.Text = "Human";
+            // 
+            // Construct Panel
+            // 
+            this.ConstructPanel.AutoSize = true;
+            this.ConstructPanel.Location = new System.Drawing.Point(13, 13);
+            this.ConstructPanel.Name = "Construct";
+            this.ConstructPanel.Size = new System.Drawing.Size(330, 318);
+            this.ConstructPanel.TabIndex = 0;
+            this.ConstructPanel.Text = "Construct";
+            // 
+            // Character Panel
+            // 
+            this.CharacterPanel.AutoSize = true;
+            this.CharacterPanel.Controls.Add(this.name);
+            this.CharacterPanel.Location = new System.Drawing.Point(335, 13);
+            this.CharacterPanel.Name = "Character";
+            this.CharacterPanel.Size = new System.Drawing.Size(410, 318);
+            this.CharacterPanel.TabIndex = 0;
+            // 
+            // Attribute Panel
+            // 
+            this.AttributePanel.AutoSize = true;
+            this.AttributePanel.Location = new System.Drawing.Point(13, 13);
+            this.AttributePanel.Name = "Atrributes";
+            this.AttributePanel.Size = new System.Drawing.Size(330, 318);
+            this.AttributePanel.TabIndex = 0;
+            this.AttributePanel.Text = "Attributes";
+            // 
+            // name
+            // 
+            this.name.AutoSize = true;
+            this.name.Location = new System.Drawing.Point(0, 0);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(0, 13);
+            this.name.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(22, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(75, 20);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "Name";
+            this.textBox1.TextChanged += textBox1_Changed;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(22, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 20);
+            this.label1.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(358, 343);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.HumanPanel);
+            this.Controls.Add(this.ConstructPanel);
+            this.Controls.Add(this.Continue);
+            this.Controls.Add(this.AttributePanel);
+            this.MaximumSize = new System.Drawing.Size(1000, 1000);
+            this.Name = "Form1";
+            this.Text = "Into the Void Character Gen";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
+            this.CharacterPanel.ResumeLayout(false);
+            this.CharacterPanel.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel HumanPanel;
+        private System.Windows.Forms.Panel ConstructPanel;
+        private System.Windows.Forms.Panel CharacterPanel;
+        private System.Windows.Forms.Panel AttributePanel;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button construct;
+        private System.Windows.Forms.Button human;
+        private System.Windows.Forms.Button Continue;
+        private System.Windows.Forms.Label name;
+    }
+}
+
