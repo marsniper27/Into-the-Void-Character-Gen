@@ -15,6 +15,7 @@ namespace Into_The_Void_Character_Gen
         public static Panel panel = new Panel();
         public static Panel characterPanel = new Panel();
         public static Panel AttributesPanel = new Panel();
+        public static Panel FlawsPanel = new Panel();
         public static List<GroupBox> buttonGroups = new List<GroupBox>();
         public static List<String> Attributes = new List<String>();
         public static string Stage = "Life";

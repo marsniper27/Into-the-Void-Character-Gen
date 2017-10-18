@@ -53,6 +53,7 @@
     <Compile Include="Construct.cs" />
     <Compile Include="Details.cs" />
     <Compile Include="fileCreate.cs" />
+    <Compile Include="Flaws.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

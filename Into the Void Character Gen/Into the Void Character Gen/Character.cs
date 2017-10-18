@@ -17,6 +17,7 @@ namespace Into_The_Void_Character_Gen
         public string Planet { get; set; }
         public string Life { get; set; }
         public string Appearance { get; set; }
+        public string Career { get; set; }
 
         public int STR { get; set; }
         public int WILL { get; set; }
@@ -26,6 +27,7 @@ namespace Into_The_Void_Character_Gen
         public int PER { get; set; }
 
         public List<string> Skills = new List<string>();
+        public List<string> Flaws = new List<string>();
 
         public Character()
         {
@@ -162,6 +164,15 @@ namespace Into_The_Void_Character_Gen
             Abilities.AutoSize = true;
             Abilities.Text = "Abilities: ";
             p.Controls.Add(Abilities);
+
+            Label Flaws = new Label();
+            Flaws.Name = "Flaws";
+            Flaws.Location = new System.Drawing.Point(22, row[12]);
+            Flaws.Size = new System.Drawing.Size(75, 20);
+            Flaws.AutoSize = true;
+            Flaws.Text = "Flaws: ";
+            p.Controls.Add(Flaws);
+
         }
     }
 }

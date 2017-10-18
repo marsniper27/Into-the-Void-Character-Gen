@@ -17,7 +17,7 @@ namespace Into_The_Void_Character_Gen
         {
             CheckGroup Attributes = new CheckGroup();
             Attributes.Text = "Attributes";
-            Attributes.Location = new System.Drawing.Point(22, 60);
+            Attributes.Location = new System.Drawing.Point(13, 13);
             var x = 0;
 
             foreach (string s in Details.Attributes)

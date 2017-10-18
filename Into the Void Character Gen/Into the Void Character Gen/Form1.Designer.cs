@@ -36,6 +36,7 @@
             this.ConstructPanel = new System.Windows.Forms.Panel();
             this.CharacterPanel = new System.Windows.Forms.Panel();
             this.AttributePanel = new System.Windows.Forms.Panel();
+            this.FlawsPanel = new System.Windows.Forms.Panel();
             this.name = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -121,6 +122,15 @@
             this.AttributePanel.TabIndex = 0;
             this.AttributePanel.Text = "Attributes";
             // 
+            // Flaws Panel
+            // 
+            this.FlawsPanel.AutoSize = true;
+            this.FlawsPanel.Location = new System.Drawing.Point(13, 13);
+            this.FlawsPanel.Name = "Flaws";
+            this.FlawsPanel.Size = new System.Drawing.Size(215, 318);
+            this.FlawsPanel.TabIndex = 0;
+            this.FlawsPanel.Text = "Flaws";
+            // 
             // name
             // 
             this.name.AutoSize = true;
@@ -157,6 +167,7 @@
             this.Controls.Add(this.ConstructPanel);
             this.Controls.Add(this.Continue);
             this.Controls.Add(this.AttributePanel);
+            this.Controls.Add(this.FlawsPanel);
             this.MaximumSize = new System.Drawing.Size(1000, 1000);
             this.Name = "Form1";
             this.Text = "Into the Void Character Gen";
@@ -176,6 +187,7 @@
         private System.Windows.Forms.Panel ConstructPanel;
         private System.Windows.Forms.Panel CharacterPanel;
         private System.Windows.Forms.Panel AttributePanel;
+        private System.Windows.Forms.Panel FlawsPanel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button construct;

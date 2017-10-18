@@ -17,7 +17,9 @@ namespace Into_The_Void_Character_Gen
         public static List<String> JungleWorld = new List<String>();
         public static List<String> IceWorld = new List<String>();
         public static List<String> DesertWorld = new List<String>();
-        public static List<String> MegaCity = new List<String>();
+        public static List<string> MegaCity = new List<String>();
+
+        public static List<List<string>> Flaws = new List<List<string>>();
 
         public void main()
         {
@@ -73,7 +75,7 @@ namespace Into_The_Void_Character_Gen
             MegaCity.Add("Port District: Strength +1, Starship Repair");
             MegaCity.Add("Administration District: Intelligence +1, Persuasion");
             MegaCity.Add("Under-City: Dexterity +1, Small Arms");
-
+            
             Details.CharacterList[0].Nationality = "Democratic Alliance of  Free Colonies";
             Details.CharacterList[0].Planet = "Earthborn: Strength +1, Dexterity +1";
             Details.CharacterList[0].Life = "Big City Upbringing: Dexterity +1, Barter";
@@ -107,6 +109,12 @@ namespace Into_The_Void_Character_Gen
                         break;
                     case "Abilities":
                         foreach (string x in Details.CharacterList[0].Skills)
+                        {
+                            ctl.Text += x + "\n";
+                        }
+                        break;
+                    case "Flaws":
+                        foreach (string x in Details.CharacterList[0].Flaws)
                         {
                             ctl.Text += x + "\n";
                         }

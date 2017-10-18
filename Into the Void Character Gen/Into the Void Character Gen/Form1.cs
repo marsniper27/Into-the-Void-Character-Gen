@@ -21,6 +21,8 @@ namespace Into_The_Void_Character_Gen
             Details.characterPanel = CharacterPanel;
             var a = new Attributes();
             a.main();
+            var f = new Flaws();
+            f.main();
 
             int x = 0;
             var p = new BackgroundPanels();
@@ -96,8 +98,6 @@ namespace Into_The_Void_Character_Gen
             Details.CharacterList[0].Race = "Construct";
             C1.characterPanel(CharacterPanel);
             Details.characterPanel = CharacterPanel;
-            var a = new Attributes();
-            a.main();
 
             int x = 0;
             var p = new BackgroundPanels();
@@ -186,12 +186,30 @@ namespace Into_The_Void_Character_Gen
                 if (Attributes.checkedBoxes != 3)
                 {
                     int x = 3 - Attributes.checkedBoxes;
-                    MessageBox.Show("You have only selected " + Attributes.checkedBoxes + " attributes you may select " + x + " more.");
+                    DialogResult dr = MessageBox.Show("You have only selected " + Attributes.checkedBoxes + " attributes you may select " + x + " more.\n Would you like to use your remaining points?", "Additional Points", MessageBoxButtons.YesNo,
+                         MessageBoxIcon.Information);
+
+                    if (dr == DialogResult.Yes)
+                    {
+                        MessageBox.Show("please select " + x + "additional attributes");
+                    }
+                    else if (dr == DialogResult.No)
+                    {
+                        AttributePanel.Visible = false;
+                        Details.Stage = "Flaws";
+                        FlawsPanel.Visible = true;
+                    }
                 }
                 else
                 {
-
+                    AttributePanel.Visible = false;
+                    Details.Stage = "Flaws";
+                    FlawsPanel.Visible = true;
                 }
+            }
+            else if (Details.Stage == "Flaws")
+            {
+                MessageBox.Show("flaws should of appeared");
             }
         }
 
@@ -208,9 +226,11 @@ namespace Into_The_Void_Character_Gen
             HumanPanel.Visible = false;
             ConstructPanel.Visible = false;
             AttributePanel.Visible = false;
+            FlawsPanel.Visible = false;
             HumanPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ConstructPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Details.AttributesPanel = AttributePanel;
+            Details.FlawsPanel = FlawsPanel;
 
             Details.buttonGroups.Add(null);
             Details.buttonGroups.Add(null);
