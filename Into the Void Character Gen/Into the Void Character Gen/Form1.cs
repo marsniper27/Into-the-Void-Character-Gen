@@ -21,10 +21,6 @@ namespace Into_The_Void_Character_Gen
             Details.characterPanel = CharacterPanel;
             var a = new Attributes();
             a.main();
-            var f = new Flaws();
-            f.main();
-            var c = new Careers();
-            c.main();
 
             int x = 0;
             var p = new BackgroundPanels();
@@ -105,8 +101,6 @@ namespace Into_The_Void_Character_Gen
             a.main();
             var f = new Flaws();
             f.main();
-            var c = new Careers();
-            c.main();
 
             int x = 0;
             var p = new BackgroundPanels();
@@ -187,6 +181,9 @@ namespace Into_The_Void_Character_Gen
             // Life Stage
             if (Details.Stage == "Life")
             {
+                var c = new Careers();
+                c.main();
+
                 if (Details.CharacterList[0].Race == "Human")
                 {
                     human.Update("Button", HumanPanel);
