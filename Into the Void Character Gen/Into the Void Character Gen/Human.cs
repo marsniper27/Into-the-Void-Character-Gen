@@ -10,6 +10,9 @@ namespace Into_The_Void_Character_Gen
         public static List<String> freeColonies = new List<String>();
         public static List<String> secondColonies = new List<String>();
 
+        public static List<String> freeColoniesCarrers = new List<String>();
+        public static List<String> secondColoniesCarrers = new List<String>();
+
         public static List<String> Earthborn = new List<String>();
         public static List<String> FirstExpansion = new List<String>();
         public static List<String> FrontierWorld = new List<String>();
@@ -75,7 +78,37 @@ namespace Into_The_Void_Character_Gen
             MegaCity.Add("Port District: Strength +1, Starship Repair");
             MegaCity.Add("Administration District: Intelligence +1, Persuasion");
             MegaCity.Add("Under-City: Dexterity +1, Small Arms");
-            
+
+            freeColoniesCarrers.Add("DAFC Military - Marines: Small Arms, Null G Movement, Basic Medicine");
+            freeColoniesCarrers.Add("DAFC Military - Marines: Small Arms, Null G Movement, Basic Medicine");
+            freeColoniesCarrers.Add("DAFC Military - Marines: Small Arms, Null G Movement, Basic Medicine");
+            freeColoniesCarrers.Add("DAFC Military - Marines: Small Arms, Null G Movement, Basic Medicine");
+            freeColoniesCarrers.Add("DAFC Military - Marines: Small Arms, Null G Movement, Basic Medicine");
+            freeColoniesCarrers.Add("DAFC Military - Marines: Small Arms, Null G Movement, Basic Medicine");
+            freeColoniesCarrers.Add("DAFC Military - Marines: Small Arms, Null G Movement, Basic Medicine");
+            freeColoniesCarrers.Add("DAFC Military - Marines: Small Arms, Null G Movement, Basic Medicine");
+            freeColoniesCarrers.Add("DAFC Military - Marines: Small Arms, Null G Movement, Basic Medicine");
+            freeColoniesCarrers.Add("DAFC Military - Marines: Small Arms, Null G Movement, Basic Medicine");
+            freeColoniesCarrers.Add("DAFC Military - Marines: Small Arms, Null G Movement, Basic Medicine");
+            freeColoniesCarrers.Add("DAFC Military - Marines: Small Arms, Null G Movement, Basic Medicine");
+            freeColoniesCarrers.Add("DAFC Military - Marines: Small Arms, Null G Movement, Basic Medicine");
+            freeColoniesCarrers.Add("DAFC Military - Marines: Small Arms, Null G Movement, Basic Medicine");
+
+            secondColoniesCarrers.Add("");
+            secondColoniesCarrers.Add("");
+            secondColoniesCarrers.Add("");
+            secondColoniesCarrers.Add("");
+            secondColoniesCarrers.Add("");
+            secondColoniesCarrers.Add("");
+            secondColoniesCarrers.Add("");
+            secondColoniesCarrers.Add("");
+            secondColoniesCarrers.Add("");
+            secondColoniesCarrers.Add("");
+            secondColoniesCarrers.Add("");
+            secondColoniesCarrers.Add("");
+            secondColoniesCarrers.Add("");
+            secondColoniesCarrers.Add("");
+
             Details.CharacterList[0].Nationality = "Democratic Alliance of  Free Colonies";
             Details.CharacterList[0].Planet = "Earthborn: Strength +1, Dexterity +1";
             Details.CharacterList[0].Life = "Big City Upbringing: Dexterity +1, Barter";
@@ -130,7 +163,7 @@ namespace Into_The_Void_Character_Gen
             if (controller == "Button")
             {
                 p.Visible = false;
-                Details.AttributesPanel.Visible = true;
+                Details.CareerPanel.Visible = true;
                 return;
             }
 

@@ -36,6 +36,7 @@
             this.ConstructPanel = new System.Windows.Forms.Panel();
             this.CharacterPanel = new System.Windows.Forms.Panel();
             this.AttributePanel = new System.Windows.Forms.Panel();
+            this.CareerPanel = new System.Windows.Forms.Panel();
             this.FlawsPanel = new System.Windows.Forms.Panel();
             this.name = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -131,6 +132,15 @@
             this.FlawsPanel.TabIndex = 0;
             this.FlawsPanel.Text = "Flaws";
             // 
+            // Career Panel
+            // 
+            this.CareerPanel.AutoSize = true;
+            this.CareerPanel.Location = new System.Drawing.Point(13, 13);
+            this.CareerPanel.Name = "Career";
+            this.CareerPanel.Size = new System.Drawing.Size(215, 318);
+            this.CareerPanel.TabIndex = 0;
+            this.CareerPanel.Text = "Career";
+            // 
             // name
             // 
             this.name.AutoSize = true;
@@ -168,6 +178,7 @@
             this.Controls.Add(this.Continue);
             this.Controls.Add(this.AttributePanel);
             this.Controls.Add(this.FlawsPanel);
+            this.Controls.Add(this.CareerPanel);
             this.MaximumSize = new System.Drawing.Size(1000, 1000);
             this.Name = "Form1";
             this.Text = "Into the Void Character Gen";
@@ -188,6 +199,7 @@
         private System.Windows.Forms.Panel CharacterPanel;
         private System.Windows.Forms.Panel AttributePanel;
         private System.Windows.Forms.Panel FlawsPanel;
+        private System.Windows.Forms.Panel CareerPanel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button construct;
@@ -196,4 +208,3 @@
         private System.Windows.Forms.Label name;
     }
 }
-

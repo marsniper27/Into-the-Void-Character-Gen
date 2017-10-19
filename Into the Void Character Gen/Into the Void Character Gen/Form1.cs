@@ -23,6 +23,8 @@ namespace Into_The_Void_Character_Gen
             a.main();
             var f = new Flaws();
             f.main();
+            var c = new Careers();
+            c.main();
 
             int x = 0;
             var p = new BackgroundPanels();
@@ -36,6 +38,7 @@ namespace Into_The_Void_Character_Gen
             HumanPanel.Visible = true;
             HumanPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             CharacterPanel.Visible = true;
+            CharacterPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             var human = new Human();
             human.main();
 
@@ -98,15 +101,24 @@ namespace Into_The_Void_Character_Gen
             Details.CharacterList[0].Race = "Construct";
             C1.characterPanel(CharacterPanel);
             Details.characterPanel = CharacterPanel;
+            var a = new Attributes();
+            a.main();
+            var f = new Flaws();
+            f.main();
+            var c = new Careers();
+            c.main();
 
             int x = 0;
             var p = new BackgroundPanels();
             Details.panel = HumanPanel;
             this.Controls.Add(CharacterPanel);
             Continue.Visible = true;
+            Continue.Location = new System.Drawing.Point(Continue.Parent.Width / 2, Continue.Parent.Height - 40);
+
             panel1.Visible = false;
             HumanPanel.Visible = false;
             ConstructPanel.Visible = true;
+            ConstructPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             CharacterPanel.Visible = true;
             CharacterPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             var construct = new Construct();
@@ -133,7 +145,7 @@ namespace Into_The_Void_Character_Gen
             Nation.Location = new System.Drawing.Point(22, 60);
 
 
-            foreach (string s in Into_The_Void_Character_Gen.Construct.Nationality)
+            foreach (string s in Construct.Nationality)
             {
                 var text = s;
                 RadioButton newButton = new RadioButton();
@@ -150,48 +162,84 @@ namespace Into_The_Void_Character_Gen
                 x++;
             }
             Nation.AutoSize = true;
-            Nation.MinimumSize = new System.Drawing.Size(318, 20);
+            Nation.MinimumSize = new System.Drawing.Size(50, 20);
             Nation.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             x = 0;
             ConstructPanel.Controls.Add(Nation);
             Nation.Visible = false;
             Nation.Visible = true;
-            Details.planet = Into_The_Void_Character_Gen.Construct.Collectives;
+            Details.planet = Construct.Collectives;
             p.planetsPanel(ConstructPanel);
             p.LifePanel(ConstructPanel);
+            CharacterPanel.Location = new System.Drawing.Point(HumanPanel.Width + 10, 13);
             Continue.Location = new System.Drawing.Point(Continue.Parent.Width / 2, Continue.Parent.Height - 40);
 
         }
 
-
+        ////////////////////////////////////////
+        // Continue Button
+        /////////////////////////////////////
         private void Continue_Click(object sender, EventArgs e)
         {
             var human = new Human();
             var construct = new Construct();
+
+            // Life Stage
             if (Details.Stage == "Life")
             {
                 if (Details.CharacterList[0].Race == "Human")
                 {
                     human.Update("Button", HumanPanel);
-                    Details.Stage = "Attributes";
+                    Details.Stage = "Career";
                 }
                 else if (Details.CharacterList[0].Race == "Construct")
                 {
                     construct.Update("Button", Details.panel);
-                    Details.Stage = "Attributes";
+                    Details.Stage = "Career";
                 }
             }
+
+            // Career Stage
+            else if (Details.Stage == "Career")
+            {
+                if (Attributes.checkedBoxes != 3)
+                {
+                    int x = Careers.maxCareers - Careers.checkedBoxes;
+                    DialogResult dr = MessageBox.Show("You have only selected " + Careers.checkedBoxes + " areers you may select " + x + " more.\n Would you like to use your remaining points?", "Additional Points", MessageBoxButtons.YesNo,
+                         MessageBoxIcon.Information);
+
+                    if (dr == DialogResult.Yes)
+                    {
+                        MessageBox.Show("Please select " + x + " additional Careers");
+                    }
+                    else if (dr == DialogResult.No)
+                    {
+                        AttributePanel.Visible = false;
+                        Details.Stage = "Flaws";
+                        FlawsPanel.Visible = true;
+                    }
+                }
+                else
+                {
+                    CareerPanel.Visible = false;
+                    Details.Stage = "Attributes";
+                    AttributePanel.Visible = true;
+                }
+            }
+                
+
+            // Attributes Stage
             else if (Details.Stage == "Attributes")
             {
                 if (Attributes.checkedBoxes != 3)
                 {
-                    int x = 3 - Attributes.checkedBoxes;
+                    int x = Attributes.maxAttributes - Attributes.checkedBoxes;
                     DialogResult dr = MessageBox.Show("You have only selected " + Attributes.checkedBoxes + " attributes you may select " + x + " more.\n Would you like to use your remaining points?", "Additional Points", MessageBoxButtons.YesNo,
                          MessageBoxIcon.Information);
 
                     if (dr == DialogResult.Yes)
                     {
-                        MessageBox.Show("please select " + x + "additional attributes");
+                        MessageBox.Show("Please select " + x + " additional attributes");
                     }
                     else if (dr == DialogResult.No)
                     {
@@ -207,9 +255,11 @@ namespace Into_The_Void_Character_Gen
                     FlawsPanel.Visible = true;
                 }
             }
+
+            // Flaws stage
             else if (Details.Stage == "Flaws")
             {
-                MessageBox.Show("flaws should of appeared");
+                MessageBox.Show("Flaws complete more code to come.");
             }
         }
 
@@ -227,10 +277,12 @@ namespace Into_The_Void_Character_Gen
             ConstructPanel.Visible = false;
             AttributePanel.Visible = false;
             FlawsPanel.Visible = false;
+            CareerPanel.Visible = false;
             HumanPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ConstructPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             Details.AttributesPanel = AttributePanel;
             Details.FlawsPanel = FlawsPanel;
+            Details.CareerPanel = CareerPanel;
 
             Details.buttonGroups.Add(null);
             Details.buttonGroups.Add(null);

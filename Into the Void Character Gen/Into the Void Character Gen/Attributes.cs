@@ -12,9 +12,11 @@ namespace Into_The_Void_Character_Gen
     {
         public static int checkedBoxes = 0;
         public static bool overload = false;
+        public static int maxAttributes = 3;
 
         public void main()
         {
+
             CheckGroup Attributes = new CheckGroup();
             Attributes.Text = "Attributes";
             Attributes.Location = new System.Drawing.Point(13, 13);
