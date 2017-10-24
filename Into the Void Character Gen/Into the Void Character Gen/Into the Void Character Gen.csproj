@@ -83,6 +83,7 @@
     </Compile>
     <Compile Include="Construct.cs" />
     <Compile Include="Details.cs" />
+    <Compile Include="DieRoller.cs" />
     <Compile Include="fileCreate.cs" />
     <Compile Include="Careers.cs" />
     <Compile Include="Flaws.cs" />

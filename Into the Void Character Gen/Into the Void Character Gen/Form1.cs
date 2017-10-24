@@ -269,6 +269,7 @@ namespace Into_The_Void_Character_Gen
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            DieRoller roller = new DieRoller();
             panel1.Visible = true;
             HumanPanel.Visible = false;
             ConstructPanel.Visible = false;
@@ -283,6 +284,26 @@ namespace Into_The_Void_Character_Gen
 
             Details.buttonGroups.Add(null);
             Details.buttonGroups.Add(null);
-        }
+
+            Panel Dice = new Panel();
+            Dice.AutoSize = true;
+            Dice.Location = new System.Drawing.Point(13, 150);
+            Dice.Name = "Dice";
+            Dice.Size = new System.Drawing.Size(215, 318);
+            Dice.TabIndex = 0;
+            Dice.Text = "Dice";
+            panel1.Controls.Add(Dice);
+            Dice.Visible = true;
+
+            TextBox Die = new TextBox();
+            Die.Name = "Die";
+            Die.Location = new System.Drawing.Point(13, 13);
+            TextBox NumberDice = new TextBox();
+            NumberDice.Name = "NumberDice";
+            NumberDice.Location = new System.Drawing.Point(13, 40);
+            Dice.Controls.Add(Die);
+            Dice.Controls.Add(NumberDice);
+            roller.Create(Dice);
+        }        
     }
 }
