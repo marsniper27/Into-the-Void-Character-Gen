@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.construct = new System.Windows.Forms.Button();
             this.human = new System.Windows.Forms.Button();
+            this.Abilities = new System.Windows.Forms.Button();
             this.Continue = new System.Windows.Forms.Button();
             this.HumanPanel = new System.Windows.Forms.Panel();
             this.ConstructPanel = new System.Windows.Forms.Panel();
@@ -38,9 +39,11 @@
             this.AttributePanel = new System.Windows.Forms.Panel();
             this.CareerPanel = new System.Windows.Forms.Panel();
             this.FlawsPanel = new System.Windows.Forms.Panel();
+            this.AbilitesPanel = new System.Windows.Forms.Panel();
             this.name = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.CharacterPanel.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +53,7 @@
             this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.construct);
             this.panel1.Controls.Add(this.human);
+            this.panel1.Controls.Add(this.Abilities);
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.MinimumSize = new System.Drawing.Size(330, 318);
             this.panel1.Name = "panel1";
@@ -163,7 +167,39 @@
             this.label1.Location = new System.Drawing.Point(22, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 20);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 0; 
+            // 
+            // Abilites Panel
+            // 
+            this.AbilitesPanel.AutoSize = true;
+            this.AbilitesPanel.Controls.Add(label2);
+            this.AbilitesPanel.Location = new System.Drawing.Point(13, 13);
+            this.AbilitesPanel.Name = "Human";
+            this.AbilitesPanel.Size = new System.Drawing.Size(330, 318);
+            this.AbilitesPanel.TabIndex = 0;
+            this.AbilitesPanel.Text = "Human";
+            this.AbilitesPanel.AutoScroll = true;
+            // 
+            // Abilites
+            // 
+            this.Abilities.Location = new System.Drawing.Point(77, 300);
+            this.Abilities.Name = "Abilities";
+            this.Abilities.Size = new System.Drawing.Size(75, 23);
+            this.Abilities.TabIndex = 0;
+            this.Abilities.Text = "Abilities";
+            this.Abilities.UseVisualStyleBackColor = true;
+            this.Abilities.Click += new System.EventHandler(this.Abilities_Click);
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(15, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(750, 700);
+            this.label2.TabIndex = 0;
+            this.label2.ReadOnly = true;
+            this.label2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.label2.Multiline = true;
+            this.label2.AutoSize = true;
             // 
             // Form1
             // 
@@ -179,7 +215,7 @@
             this.Controls.Add(this.AttributePanel);
             this.Controls.Add(this.FlawsPanel);
             this.Controls.Add(this.CareerPanel);
-            this.MaximumSize = new System.Drawing.Size(1000, 1000);
+            this.Controls.Add(this.AbilitesPanel);
             this.Name = "Form1";
             this.Text = "Into the Void Character Gen";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -200,10 +236,13 @@
         private System.Windows.Forms.Panel AttributePanel;
         private System.Windows.Forms.Panel FlawsPanel;
         private System.Windows.Forms.Panel CareerPanel;
+        private System.Windows.Forms.Panel AbilitesPanel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox label2;
         private System.Windows.Forms.Button construct;
         private System.Windows.Forms.Button human;
+        private System.Windows.Forms.Button Abilities;
         private System.Windows.Forms.Button Continue;
         private System.Windows.Forms.Label name;
     }

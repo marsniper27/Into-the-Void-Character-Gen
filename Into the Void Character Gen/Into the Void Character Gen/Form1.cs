@@ -267,6 +267,17 @@ namespace Into_The_Void_Character_Gen
             name.Text = "Name: " + Details.CharacterList[0].NAME;
         }
 
+        private void Abilities_Click(object sender, EventArgs e)
+        {
+            Button spacecraft = new Button();
+            spacecraft.Text = "Spacecraft Abilites";
+            var a = new Abilities();
+            a.generate();
+            a.abilityPanel(spacecraft, label2);
+            panel1.Visible = false;
+            AbilitesPanel.Visible = true;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             DieRoller roller = new DieRoller();
@@ -276,8 +287,10 @@ namespace Into_The_Void_Character_Gen
             AttributePanel.Visible = false;
             FlawsPanel.Visible = false;
             CareerPanel.Visible = false;
+            AbilitesPanel.Visible = false;
             HumanPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ConstructPanel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            AbilitesPanel.AutoSizeMode = AutoSizeMode.GrowOnly;
             Details.AttributesPanel = AttributePanel;
             Details.FlawsPanel = FlawsPanel;
             Details.CareerPanel = CareerPanel;
