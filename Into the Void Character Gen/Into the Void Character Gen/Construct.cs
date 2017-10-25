@@ -14,7 +14,7 @@ namespace Into_The_Void_Character_Gen
         public static List<String> Appearance = new List<String>();
         public static List<String> FriendlyAppearance = new List<String>();
         public static List<String> MechanicalAppearance = new List<String>();
-        
+        public static List<String> ConstructCareers = new List<String>();
 
         public void main()
         {
@@ -39,6 +39,20 @@ namespace Into_The_Void_Character_Gen
             MechanicalAppearance.Add("Extra Limb: Dexterity + 1, Hand to Hand");
             MechanicalAppearance.Add("Heavy Lifting Gear: Strength + 1, Heavy Weapons");
 
+            ConstructCareers.Add("Construct Navy - Heavy Weapon Platform: Heavy Weapons, Survivalism, Rover Operation");
+            ConstructCareers.Add("Construct Navy - Boarding Operations Specialist: Small Arms, Hand to Hand, Null G Movement");
+            ConstructCareers.Add("Construct Navy - Field Repair Platform: Repair, Engineering, Always Prepared");
+            ConstructCareers.Add("Construct Navy - Long Range Anti-Materiel Platform: Sniping, Stealth, Pathfinding");
+            ConstructCareers.Add("Advanced Education - Applied FTL Physics and FTL Navigation: FTL Systems, Navigation, Computer Specialist");
+            ConstructCareers.Add("Advanced Education - Exobiology: Fauna Specialist, Advanced Medicine, Flora Specialist");
+            ConstructCareers.Add("Advanced Education - Exoplanet Colonisation: Repair, Rover Operation, Engineering");
+            ConstructCareers.Add("Advanced Education - Linguistic Studies and Theoretical Exo-Linguistics: Persuade, Leadership, Translation Specialist");
+            ConstructCareers.Add("Advanced Education - Engineering: Engineering, Starship Repair, Computer Specialist");
+            ConstructCareers.Add("Advanced Education - Exoplanet Geology and Atmospheric Chemistry: Exploration, Planetary Identification, Underground Navigation");
+            ConstructCareers.Add("Career - Research Assistant: Computer Specialist, Always Prepared, Persuasion");
+            ConstructCareers.Add("Career - Test Pilot: Piloting, Rover Operation, Navigation");
+            ConstructCareers.Add("Career - Explorer: Extreme Environment Survival, Exploration, Always Prepared");
+            ConstructCareers.Add("Career - Trade and Diplomacy Negotiator: Persuade, Barter, Inventory Management");
 
             Details.CharacterList[0].Nationality = "Construct Collective";
             Details.CharacterList[0].Planet = "Barren Planet: Strength + 1, Resilience + 1";
@@ -116,27 +130,35 @@ namespace Into_The_Void_Character_Gen
             {
                 case "Critical System Backups: Resilience + 1, Survivalism":
                     C1.RES++;
+                    C1.Skills.Add("Survivalism");
                     break;
                 case "Communications Package: Willpower + 1, Comms and Sensors":
                     C1.WILL++;
+                    C1.Skills.Add("Comms and Sensors");
                     break;
                 case "Expanded Memory Drives: Intelligence + 1, Computer Specialist":
                     C1.INT++;
+                    C1.Skills.Add("Computer Specialist");
                     break;
                 case "Precision Servomotors: Dexterity + 1, Repair":
                     C1.DEX++;
+                    C1.Skills.Add("Repair");
                     break;
                 case "Integrated Defense Systems: Resilience + 1, Small arms":
                     C1.RES++;
+                    C1.Skills.Add("Small arms");
                     break;
                 case "Industrial Tool Harness: Intelligence + 1, Repair":
                     C1.INT++;
+                    C1.Skills.Add("Repair");
                     break;
                 case "Extra Limb: Dexterity + 1, Hand to Hand":
                     C1.DEX++;
+                    C1.Skills.Add("Hand to Hand");
                     break;
                 case "Heavy Lifting Gear: Strength + 1, Heavy Weapons":
                     C1.STR++;
+                    C1.Skills.Add("Heavy Weapons");
                     break;
             }
             
